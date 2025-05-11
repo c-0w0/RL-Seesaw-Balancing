@@ -1,0 +1,82 @@
+[gd_scene load_steps=10 format=3 uid="uid://bidch4w6qudh3"]
+
+[ext_resource type="Texture2D" uid="uid://bt2px65w6tvy1" path="res://resources/1.png" id="1_00w0i"]
+[ext_resource type="Script" uid="uid://bvkaj5wvpct4l" path="res://scripts/passenger.gd" id="1_h0g25"]
+[ext_resource type="Texture2D" uid="uid://bjhhjs8aft6wa" path="res://resources/2.png" id="2_fchql"]
+[ext_resource type="Texture2D" uid="uid://bjnajm4ajk3ht" path="res://resources/3.png" id="3_xcmir"]
+[ext_resource type="Texture2D" uid="uid://4qu8j21ew5ni" path="res://resources/4.png" id="4_lykt4"]
+[ext_resource type="Texture2D" uid="uid://b3vohwbajujk2" path="res://resources/5.png" id="5_iyyq1"]
+[ext_resource type="Script" uid="uid://gu3g8rw6ph3k" path="res://scripts/ai_controller_2d.gd" id="7_rm1hr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h4n82"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_00w0i")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fchql")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xcmir")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_lykt4")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_iyyq1")
+}],
+"loop": true,
+"name": &"5",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jkcmd"]
+size = Vector2(34, 34)
+
+[node name="Passenger" type="RigidBody2D" node_paths=PackedStringArray("ai", "anim") groups=["Passengers"]]
+collision_layer = 6
+script = ExtResource("1_h0g25")
+ai = NodePath("AIController2D")
+anim = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2.5, 4.5)
+scale = Vector2(1.63, 1.63)
+sprite_frames = SubResource("SpriteFrames_h4n82")
+animation = &"1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+shape = SubResource("RectangleShape2D_jkcmd")
+
+[node name="AIController2D" type="Node2D" parent="."]
+script = ExtResource("7_rm1hr")
+metadata/_custom_type_script = "uid://cvepiqbc0ldb6"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[connection signal="timeout" from="Timer" to="AIController2D" method="_on_timer_timeout"]

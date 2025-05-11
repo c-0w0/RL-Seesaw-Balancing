@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce3eo13p44cwa"]
+
+[ext_resource type="Script" uid="uid://dcnchl5rm7ugp" path="res://addons/godot_rl_agents/sync.gd" id="1_fiyi6"]
+[ext_resource type="PackedScene" uid="uid://cmw1wscf4ylhk" path="res://scenes/game.tscn" id="2_1njql"]
+
+[node name="Batch_env" type="Node2D"]
+
+[node name="Sync" type="Node" parent="."]
+script = ExtResource("1_fiyi6")
+speed_up = 1.5
+metadata/_custom_type_script = "uid://dcnchl5rm7ugp"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1738, 982)
+zoom = Vector2(0.32, 0.32)
+
+[node name="Game" parent="." instance=ExtResource("2_1njql")]
+position = Vector2(579, 325)
+
+[node name="Game2" parent="." instance=ExtResource("2_1njql")]
+position = Vector2(1730, 325)
+
+[node name="Game3" parent="." instance=ExtResource("2_1njql")]
+position = Vector2(2881, 325)
+
+[node name="Game4" parent="." instance=ExtResource("2_1njql")]
+position = Vector2(579, 973)
+
+[node name="Game5" parent="." instance=ExtResource("2_1njql")]
+position = Vector2(1730, 973)
+
+[node name="Game6" parent="." instance=ExtResource("2_1njql")]
+position = Vector2(2882, 973)
+
+[node name="Game7" parent="." instance=ExtResource("2_1njql")]
+position = Vector2(579, 1621)
+
+[node name="Game8" parent="." instance=ExtResource("2_1njql")]
+position = Vector2(1730, 1621)
+
+[node name="Game9" parent="." instance=ExtResource("2_1njql")]
+position = Vector2(2882, 1621)
