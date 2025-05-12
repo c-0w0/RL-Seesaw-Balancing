@@ -10,16 +10,22 @@ To run the project for the forst time, follow the steps below.
 > cd Project
 2. Clone the project into the folder. 
 > git clone https://github.com/c-0w0/RL-Seesaw-Balancing.git
-3. Move the stable_baselines3_example.py from the folder that is downloaded outside.
-4. Create a python virtual environment to hold the neural network.
+3. Move the stable_baselines3_example.py to the parent folder **Project**.
+
+4. Create a python virtual environment to hold the neural network at the parent folder **Project**.
 > python -m venv AISquares
+
+![image](https://github.com/user-attachments/assets/e9467268-401d-4c5e-96e8-4baf1cc09e52)
+
 5. Activate the virtual environment and install the framework.
 > AISquares\Scripts\activate
-> 
+>
 > pip install godot-rl
 6. Execute the neural network framework.
 > python stable_baselines3_example.py
-7. Run the godot application by using the play button on the top right.
+
+7. Run(F5) the godot application by using the play button on the top right.
+   
 8. Watch as the neural network tries to balance on the seat. 
 
 To run the project for the next time, follow the steps below.
@@ -30,3 +36,8 @@ To run the project for the next time, follow the steps below.
 2. Execute the neural network framework.
 > python stable_baselines3_example.py
 3. Run the godot application by using the play button on the top right.
+
+![image](https://github.com/user-attachments/assets/0a0f1ee0-31eb-42cd-b4aa-49de317c77fb)
+![image](https://github.com/user-attachments/assets/03ac92ce-f43c-4446-bf82-cde04bdda918)
+
+
