@@ -14,6 +14,10 @@ config/name="RL Seesaw Balancing"
 run/main_scene="uid://ce3eo13p44cwa"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 
+[debug]
+
+gdscript/warnings/inferred_declaration=1
+
 [display]
 
 window/stretch/mode="canvas_items"

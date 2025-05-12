@@ -7,8 +7,7 @@ class_name Passenger
 @onready var init: bool = false
 
 func _physics_process(_delta):
-	var momentum: Vector2 = mass * Vector2(ai.move.x, 0) * 20 # amplification factor: 20 
-	apply_central_impulse(momentum)
+	linear_velocity.x = ai.move.x * 150
 
 func reset(line: Line2D) -> void:
 	rng_mass()
@@ -16,7 +15,7 @@ func reset(line: Line2D) -> void:
 	ai.reset_sequence()
 
 func rng_mass() -> void:
-	var random_weight: int = randi_range(1, 5)
+	var random_weight: int = randi_range(2, 4)
 	anim.play(str(random_weight))
 	
 	match random_weight:

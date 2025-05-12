@@ -10,6 +10,9 @@ class_name Seat
 @onready var progress_bar: ProgressBar = seesaw.get_node("ProgressBar")
 @onready var anim: AnimatedSprite2D = get_node("AnimatedSprite2D")
 
+@onready var score: Label = seesaw.get_node("Score")
+@onready var current_score: int = 0
+
 func _physics_process(_delta):
 	anim.animation = "white" if (abs(rotation) < balance_deg) else "red"
 	progress_bar.value = (progress_timer.wait_time - progress_timer.time_left) / progress_timer.wait_time * 100
@@ -35,4 +38,10 @@ func _on_progress_timer_timeout() -> void:
 	# 1. Ends current episode 
 	# 2. Randomizes passenger masses/positions
 	# 3. Preserves training metrics
+	current_score += 1
+	score.text = "Score: " + str(current_score)
 	game.reset() 
+	for child: Node2D in game.get_children():
+		if child.is_in_group("Passengers"):
+			var ai: PassengerAI = child.get_node("AIController2D")
+			ai.reward += 10

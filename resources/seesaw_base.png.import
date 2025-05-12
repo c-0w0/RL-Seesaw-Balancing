@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwfjemrdla5gr"
-path="res://.godot/imported/seesaw_base_red.png-5079cdbeea6049320597745ad737e661.ctex"
+uid="uid://d11lmi2m8aboc"
+path="res://.godot/imported/seesaw_base.png-b26a2da3bbbbba73526a645bd9fc103d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/seesaw_base_red.png"
-dest_files=["res://.godot/imported/seesaw_base_red.png-5079cdbeea6049320597745ad737e661.ctex"]
+source_file="res://resources/seesaw_base.png"
+dest_files=["res://.godot/imported/seesaw_base.png-b26a2da3bbbbba73526a645bd9fc103d.ctex"]
 
 [params]
 

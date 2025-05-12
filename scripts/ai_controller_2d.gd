@@ -15,15 +15,15 @@ var offset: Vector2
 
 func get_obs() -> Dictionary:
 	offset = passenger.position - pin.position 
-	var obs := [
+	var obs: Array[float] = [
 		passenger.mass,
 		offset.x,
 		offset.y,
 		seat.rotation,
-		seat.angular_velocity
+		seat.angular_velocity*100
 	]
 	
-	for child in get_parent().get_parent().get_children():
+	for child: Node2D in get_parent().get_parent().get_children():
 		if child.is_in_group("Passengers"):
 			if child != owner:
 				var _offset = child.position - pin.position
@@ -63,5 +63,5 @@ func _on_timer_timeout() -> void:
 func reset_sequence() -> void:
 	reward -= 10
 	penalty = 0
-	reset()
+	#reset()
 	
