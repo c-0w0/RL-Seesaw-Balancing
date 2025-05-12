@@ -20,8 +20,6 @@ To run the project for the forst time, follow the steps below.
 7. Run the godot application by using the play button on the top right.
 8. Watch as the neural network tries to balance on the seat. 
 
-The neural network usually takes about 85 iterations to start becoming successful.
-
 To run the project for the next time, follow the steps below.
 
 1. Activate the virtual environment.
