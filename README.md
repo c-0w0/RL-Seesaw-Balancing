@@ -1,6 +1,4 @@
-# RL-Seesaw-Balancing
-
-This is a project to showcase reinforcement learning implementation in Godot. The neural network framework used can be found at [here](https://github.com/edbeeching/godot_rl_agents.git).
+This is a project to showcase reinforcement learning implementation in Godot. The neural network framework used can be found [here](https://github.com/edbeeching/godot_rl_agents.git).
 
 ![image](https://github.com/user-attachments/assets/0a0f1ee0-31eb-42cd-b4aa-49de317c77fb)
 ![image](https://github.com/user-attachments/assets/03ac92ce-f43c-4446-bf82-cde04bdda918)
@@ -40,7 +38,6 @@ This is a project to showcase reinforcement learning implementation in Godot. Th
    ```
 7. Run the game in Godot.
 8. Watch as the neural network tries to balance on the seat. 
-
 
 
 ## To run the project for after the first time:
